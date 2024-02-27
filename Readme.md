@@ -4,20 +4,18 @@
 
 ## Descripción
 
-- Crear una máquina virtual, con Apache y PHP (instalar desde el script de inicio)
 
-- Crear un depósito S3 para almacenar imágenes
+- Crear un depósito S3 público para almacenar imágenes
 
-- Crear una instancia de BD administrada (BD, usuario, acceso solo a la instancia anterior).
+- Crear una instancia de BD administrada (BD, usuario, con acceso solo desde una de tus instancias).
 NOTA: Recuerda seleccionar una instancia de la capa gratuita para no incurrir en gastos innecesarios
 
-- En la máquina virtual crear una webApp que acceda a la BD y muestre imágenes del almacenamiento.
-
-Recuerda detener los recursos cuando no lo uses para que el crédito no se consuma innecesariamente.
-
+Opcionalmente, crea en la máquina virtual una aplicación que muestre la imágenes del depósito S3, que se conecte a la BD y que permita subir imágenes al depósito.
 
 
 ### Código de Ayuda
+
+El siguiente código puede ayudarte, si creas la aplicación con PHP.
 
 ##### connect_db.php
 
