@@ -4,16 +4,25 @@
 
 ## Descripción
 
+- Crear un depósito S3 público para almacenar imágenes y sube al menos una imagen.
 
-- Crear un depósito S3 público para almacenar imágenes
+- Crear una instancia de BD administrada (BD, usuario, con acceso solo desde una de tus máquinas virtuales o de tu IP personal, si no vas a realizar la parte opcional).
+NOTA: Recuerda seleccionar, para la BD, una instancia de la capa gratuita para no incurrir en gastos innecesarios
 
-- Crear una instancia de BD administrada (BD, usuario, con acceso solo desde una de tus instancias).
-NOTA: Recuerda seleccionar una instancia de la capa gratuita para no incurrir en gastos innecesarios
+### Parte Opcional: 
 
 Opcionalmente, crea en la máquina virtual una aplicación que muestre la imágenes del depósito S3, que se conecte a la BD y que permita subir imágenes al depósito.
 
 
-### Código de Ayuda
+### Documentación AWS
+SDK PHP: https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/getting-started_index.html
+
+### Documentación GCP
+PHP para Cloud Storage: https://cloud.google.com/php/docs/reference/cloud-storage/latest
+
+
+
+### Código de Ayuda para AWS
 
 El siguiente código puede ayudarte, si creas la aplicación con PHP.
 
