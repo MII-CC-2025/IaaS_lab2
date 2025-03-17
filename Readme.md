@@ -64,6 +64,15 @@ El siguiente código puede ayudarte, si creas la aplicación con PHP.
 </html>
 ```
 
+#### Credenciales AWS
+
+
+```
+$ export AWS_ACCESS_KEY_ID=XXXXX
+$ export AWS_SECRET_ACCESS_KEY=XXXXX
+$ export AWS_SESSION_TOKEN=XXXX
+```
+
 ##### list_buckets.php
 
 ```php
@@ -84,11 +93,7 @@ $s3Client = new S3Client([
     //'profile' => 'default',
     'region' => 'us-east-1',
     'version' => 'latest',
-    'credentials' => [
-        'key'    => $_ENV['AWS_KEY'],
-        'secret' => $_ENV['AWS_SECRET'],
-        'token' => $_ENV['AWS_TOKEN'] 
-    ]
+    'credentials' => CredentialProvider::env()
 ]);
 
 //Listing all S3 Bucket
@@ -113,10 +118,7 @@ foreach ($buckets['Buckets'] as $bucket) {
 		$s3 = new Aws\S3\S3Client([
 			'region'  => '-- your region --',
 			'version' => 'latest',
-			'credentials' => [
-				'key'    => "-- access key id --",
-				'secret' => "-- secret access key --",
-			]
+			'credentials' => CredentialProvider::env()
 		]);		
 
 		$result = $s3->putObject([
